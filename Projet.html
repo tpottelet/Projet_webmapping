@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte WMS avec Leaflet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/esri-leaflet@3.0.10/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@4.2.3/dist/esri-leaflet-vector.js"></script>
+    <link rel="stylesheet" href="Projet.css"/>
+    <script src = "Projet.js" defer></script>
+</head>
+<body>
+    <header>Carte WMS avec Leaflet</header>
+    <div id="map-container">
+        <div id="legend" class="legend"></div>
+        <div id="style-selector">
+            <label for="styleSelect">Choisissez un style :</label>
+            <select id="styleSelect">
+                <option value="Style_ndvi">Style 1</option>
+                <option value="Style_ndvi_b2">Style 2</option>
+            </select>
+        </div>
+        <div id="map"></div>
+    </div>
+</body>
+</html>
