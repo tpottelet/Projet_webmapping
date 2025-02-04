@@ -23,7 +23,6 @@ const mask = L.tileLayer.wms('https://www.geotests.net/geoserver/ThomasP/wms?', 
     layers: 'ThomasP:masque_foret',
     format: 'image/png',
     transparent: true,
-    attribution: '&copy; GeoTests'
 });
 
 let ndvi = L.tileLayer.wms('https://www.geotests.net/geoserver/ThomasP/wms?', {
@@ -32,7 +31,6 @@ let ndvi = L.tileLayer.wms('https://www.geotests.net/geoserver/ThomasP/wms?', {
     styles: 'Style_ndvi', // Style par défaut
     format: 'image/png',
     transparent: true,
-    attribution: '&copy; GeoTests'
 });
 
 const essences = L.tileLayer.wms('https://www.geotests.net/geoserver/ThomasP/wms?', {
@@ -40,7 +38,6 @@ const essences = L.tileLayer.wms('https://www.geotests.net/geoserver/ThomasP/wms
     layers: 'ThomasP:carte_essences_echelle_pixel',
     format: 'image/png',
     transparent: true,
-    attribution: '&copy; GeoTests'
 });
 
 // Ajout des couches WMS dans un objet séparé
@@ -119,3 +116,6 @@ styleSelect.addEventListener("change", function() {
     // Mettre à jour la légende après le changement de style
     updateLegend();
 });
+
+// Ajouter un contrôle d'échelle
+L.control.scale().addTo(map);
